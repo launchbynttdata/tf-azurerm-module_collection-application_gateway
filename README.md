@@ -38,12 +38,12 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/
 
   https://learn.microsoft.com/en-us/azure/application-gateway/configuration-infrastructure?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#network-security-groups
 
-  3. Can we deploy Application Gateway with `private IP address` only, without giving it a `public IP address`? 
-  Yes. There are additional features available along with just providing the `private IP address` only. The features are mentioned [here](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-private-deployment?tabs=portal). 
+  3. Can we deploy Application Gateway with `private IP address` only, without giving it a `public IP address`?
+  Yes. There are additional features available along with just providing the `private IP address` only. The features are mentioned [here](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-private-deployment?tabs=portal).
   However since these features are in private/public preview, they will not be available on Azure government cloud(as of 04/16/2024).
 
   4. Why is there need of having `public IP address` along with `private IP address` for Application Gateway deployment?
-  
+
   Application Gateway v2 currently supports the following combinations:
 
   - Private IP address and public IP address

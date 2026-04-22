@@ -11,6 +11,10 @@
 // limitations under the License.
 
 
+provider "azurerm" {
+  features {}
+}
+
 # This module generates the resource-name of resources based on resource_type, naming_prefix, env etc.
 module "resource_names" {
   source  = "terraform.registry.launch.nttdata.com/module_library/resource_name/launch"
