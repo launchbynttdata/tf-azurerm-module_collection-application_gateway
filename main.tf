@@ -33,6 +33,7 @@ module "app_gateway" {
   ip_allocation_method                       = each.value.ip_allocation_method
   ip_sku                                     = each.value.ip_sku
   ip_tags                                    = each.value.ip_tags
+  ssl_policy                                 = each.value.ssl_policy
   ip_ddos_protection_mode                    = each.value.ip_ddos_protection_mode
   ip_ddos_protection_plan_id                 = each.value.ip_ddos_protection_plan_id
 

@@ -41,16 +41,20 @@ app_gateways = {
     custom_frontend_priv_ip_configuration_name = "first_fe_ip_config_private"
     appgw_private                              = true
     appgw_private_ip                           = "10.0.0.6"
-    subnet_cidr                                = "10.0.0.0/24"
-    create_nsg                                 = false
-    create_nsg_healthprobe_rule                = false
-    create_nsg_https_rule                      = false
-    custom_nsg_name                            = "appgw-nsg"
-    custom_nsr_healthcheck_name                = "appgw-healthcheck"
-    custom_nsr_https_name                      = "appgw-https"
-    custom_subnet_name                         = "appgw-subnet"
-    nsr_https_source_address_prefix            = "Any"
-    enable_http2                               = false
+    ssl_policy = {
+      policy_type = "Predefined"
+      policy_name = "AppGwSslPolicy20220101"
+    }
+    subnet_cidr                     = "10.0.0.0/24"
+    create_nsg                      = false
+    create_nsg_healthprobe_rule     = false
+    create_nsg_https_rule           = false
+    custom_nsg_name                 = "appgw-nsg"
+    custom_nsr_healthcheck_name     = "appgw-healthcheck"
+    custom_nsr_https_name           = "appgw-https"
+    custom_subnet_name              = "appgw-subnet"
+    nsr_https_source_address_prefix = "Any"
+    enable_http2                    = false
   }
 }
 address_space   = ["10.0.0.0/16"]
