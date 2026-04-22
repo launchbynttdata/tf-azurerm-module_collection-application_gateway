@@ -1,7 +1,7 @@
 # tf-azurerm-module_collection-application_gateway
 In this example, we deploy an application gateway with a backend pool and HTTP listener. Creating a backend pool is madatory for deployment of the app gateway. The backend pool contains a windows server 2022 VM which is not created as part of terraform setup. The public address "74.249.99.178" specified in backend pool settings is placeholder IP address of that VM. The example creates a vnet, subnet, resource group where app gateway will reside. The example also demonstrates creation of multiple app gateway service instances using variable of type `map(object)`
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -14,8 +14,8 @@ In this example, we deploy an application gateway with a backend pool and HTTP l
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.110.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.6.2 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.117.1 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.8.1 |
 
 ## Modules
 
@@ -115,4 +115,4 @@ In this example, we deploy an application gateway with a backend pool and HTTP l
 | <a name="output_appgw_url_path_map_ids"></a> [appgw\_url\_path\_map\_ids](#output\_appgw\_url\_path\_map\_ids) | List of URL path map Ids. |
 | <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Resource group name |
 | <a name="output_jumpbox_password"></a> [jumpbox\_password](#output\_jumpbox\_password) | Jumpbox password |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

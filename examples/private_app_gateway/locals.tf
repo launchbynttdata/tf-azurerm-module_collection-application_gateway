@@ -40,7 +40,7 @@ locals {
     destination_address_prefix = module.app_gateway.appgw_public_ip_address["first_gateway"]
   }]
 
-  all_security_rules = concat(var.security_rules, local.additional_security_rule)
+  all_security_rules = concat(coalesce(var.security_rules, []), local.additional_security_rule)
 
   jumpbox_vm_nic_ip_configuration = {
     name                          = var.jumpbox_vm_nic_ip_configuration.name
